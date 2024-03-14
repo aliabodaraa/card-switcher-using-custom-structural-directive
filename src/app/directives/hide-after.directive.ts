@@ -43,4 +43,10 @@ export class HideAfterDirective implements OnInit {
       clearInterval(counter_interval_id);
     }, this._delay);
   }
+  static ngTemplateContextGuard(
+    dir: HideAfterDirective,
+    ctx: unknown
+  ): ctx is HideAfterContext {
+    return true;
+  }
 }

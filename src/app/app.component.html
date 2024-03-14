@@ -1,9 +1,9 @@
-<div *hideAfter="4000; then placeholder_template" class="card text-white bg-success mb-3" style="max-width: 18rem;">
+<div *hideAfter="4000 as time; then placeholder_template" class="card text-white bg-success mb-3"
+  style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-    </p>
+    <p class="card-text">this layout should disappear in {{time}} seconds</p>
   </div>
 </div>
 <ng-template #placeholder_template>
@@ -11,8 +11,7 @@
     <div class="card-header">Header</div>
     <div class="card-body">
       <h5 class="card-title">Danger card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">this layout should disappear in seconds</p>
     </div>
   </div>
 </ng-template>

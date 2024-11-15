@@ -1,17 +1,8 @@
-<div *hideAfter="4000 as time; then placeholder_template;let counter=counter" class="card text-white bg-success mb-3"
-  style="max-width: 18rem;">
-  <div class="card-header">Header {{time}}</div>
-  <div class="card-body">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">this layout should disappear in {{counter}} seconds</p>
+<div *carousel="let source from images; let ctrl=controller;let sourceUrl;let actionsAllowed=actionsAllowed">
+  <h1>{{sourceUrl}}</h1>
+  <div class="d-flex">
+    <button (click)="ctrl.prev()" class="btn btn-danger" [disabled]="!actionsAllowed.prev">PREV</button>
+    <img [src]="source" class="rounded" />
+    <button (click)="ctrl.next()" class="btn btn-success" [disabled]="!actionsAllowed.next">NEXT</button>
   </div>
-</div>
-<ng-template #placeholder_template let-prevPeriod="hideAfter" let-myDefault>
-  <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Danger card title</h5>
-      <p class="card-text">It was visable for {{prevPeriod}} seconds -- {{myDefault}}</p>
-    </div>
-  </div>
-</ng-template>
+</div>>

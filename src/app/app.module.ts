@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HideAfterDirective } from './directives/hide-after.directive';
+import { CarouselDirective } from './directives/carousel.directive';
 
 @NgModule({
-  declarations: [AppComponent, HideAfterDirective],
+  declarations: [AppComponent, CarouselDirective],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
